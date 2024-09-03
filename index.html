@@ -18,45 +18,43 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
             padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
         }
 
         .index_title {
             font-size: 24px;
             font-weight: bold;
-            text-align: center;
             margin-bottom: 20px;
-            color: #0056b3;
-        }
-
-        .index_contentBox {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .index_icon_size {
-            display: block;
-            margin: 0 auto;
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
         }
 
         .index_main_title {
-            font-size: 20px;
-            margin-top: 10px;
-            color: #ff6600;
-            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
         }
 
         .index_download_button_wrap {
@@ -66,8 +64,9 @@
             background-color: #007bff;
             color: #fff;
             text-align: center;
-            border-radius: 5px;
+            border-radius: 4px;
             text-decoration: none;
+            font-size: 14px;
         }
 
         .index_download_button_wrap:hover {
@@ -75,15 +74,16 @@
         }
 
         .download-help {
-            font-size: 14px;
+            font-size: 12px;
             color: #777;
             margin-top: 20px;
         }
 
         .modalBottomLine {
-            margin-top: 40px;
-            font-size: 16px;
+            margin-top: 30px;
+            font-size: 14px;
             color: #333;
+            text-align: left;
         }
 
         .drawer_accentText {
@@ -95,80 +95,58 @@
             color: #666;
         }
 
-        .mt-10 {
-            margin-top: 10px;
-        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
 
-        .mt-15 {
-            margin-top: 15px;
-        }
+            .index_title {
+                font-size: 20px;
+            }
 
-        .mt-35 {
-            margin-top: 35px;
-        }
+            .index_main_title {
+                font-size: 16px;
+            }
 
-        .fs-12 {
-            font-size: 12px;
-        }
+            .index_download_button_wrap {
+                padding: 8px 15px;
+                font-size: 13px;
+            }
 
-        .csr-p {
-            cursor: pointer;
-        }
-
-        .fixed-width {
-            width: 150px;
+            .modalBottomLine {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
-<body class="default mf-0 p1-portal p2-page p3-downloads language-zh-cn">
+<body>
     <div class="container">
-        <div class="row">
-            <div class="download-page">
-                <div class="index_app">
-                    <div class="index_contentBox">
-                        <div class="App">
-                            <div class="index_title">随时随地，畅游互联网</div>
-                            <div class="index_downloadArea">
-                                <div class="index_download_block_wrap">
-                                    <img class="index_icon_size" src="img/logo-round-128.png" alt="小鸟云Falemon">
-                                    <div class="index_desc_wrap">
-
-                                    </div>
-                                    <div class="download-btn-wrapper">
-                                        <iframe width="100%" height="270px" src="https://w.jiesuo.link/share/appleid?access_token=d5cda34965d4559bf7c26d265cc4e324' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                                        <a href="https://www.qukemao.xyz/" target="_blank" class="index_download_button_wrap fixed-width">小火箭节点购买</a>
-                                        <a href="https://www.qukemao.xyz/" target="_blank" class="index_download_button_wrap fixed-width">购买独享ID</a>
-                                    </div>
-                                    <div class="download-help drawer_lightText mt-10 fs-12">禁止登录设置icloud 此共享账号仅供登录苹果商店下载软件使用，如登录其他功能设置，造成一切后果需自行承担</div>
-                                </div>
-                                <div class="modalBottomLine mt-35">
-                                    <div class="drawer_content">
-                                        <div class="">
-                                            <span class="drawer_accentText">步骤一: 登录上方共享id到苹果应用商店，然后下载 <img src="img/shadowrocket.jpeg" width="19" height="19" alt="下载小火箭Shadowrocket">小火箭<a href="https://apps.apple.com/us/app/shadowrocket/id932747118" class="js-report-btn" data-url="点我下载">  【点我下载】</a></span>
-                                        </div>
-                                        <div class="mt-5">
-                                            <span class="drawer_lightText">
-                                                1. 如您已下载小火箭(Shadowrocket)，请跳到步骤二；
-                                                <br>2. 打开AppStore，右上角退出已有账号，登录共享id提供的账号，下载(Shadowrocket)
-                                                <br>3. 如提示「<strong>Apple ID 安全</strong>」，选择 <strong>其他选项</strong> - <strong>不升级，即可登录</strong>；
-                                                <br>4. 若账号问题，请联系右下角客服 ，根据客服提示操作；
-                                                <br>5. <code class="download-js-copy csr-p" title="点击复制" data-content="Shadowrocket">Shadowrocket</code>下载完成后请退出共享的id，并切换回自己的id。
-                                            </span>
-                                        </div>
-                                        <div class="mt-15">
-                                            <span class="drawer_accentText">步骤二：注册并登录官网<a href="/index.php" class="js-report-btn" data-url="点我注册">  【点我注册】</a>
-                                            <br>1. 登录官网后，点击主页一键订阅，点击一键导入到Shadowrocket
-                                            <br>2. 选择线路连接，如若网络不可用，请更换线路或登录官网检查是否到期；
-                                            <br>3. 新用户注册都有免费体验时长,请确认能够使用在购买；
-                                            <br>4. 有任何问题，请联系右下角客服处理,或登录官网提交工单。
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="index_title">随时随地，畅游互联网</div>
+        <div class="index_contentBox">
+            <img class="index_icon_size" src="https://www.shadowrocketdownload.com/img/logo.png" alt="樱花云 Logo">
+            <div class="index_main_title">Shadowrocket<span>（如需验证 请稍后尝试，账号20分钟刷新一次）</span></div>
+            <iframe width="100%" height="270px" src="https://u.fast6.xyz/share/a?access_token=d5cda34965d4559bf7c26d265cc4e324" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div>
+                <a href="https://www.qukemao.xyz/" target="_blank" class="index_download_button_wrap">小火箭节点购买</a>
+                <a href="https://www.qukemao.xyz/" target="_blank" class="index_download_button_wrap">购买独享ID</a>
+            </div>
+            <div class="download-help">禁止登录设置icloud 此共享账号仅供登录苹果商店下载软件使用，如登录其他功能设置，造成一切后果需自行承担</div>
+        </div>
+        <div class="modalBottomLine">
+            <div class="drawer_accentText">步骤一: 登录上方共享id到苹果应用商店，然后下载小火箭</div>
+          <a href="https://apps.apple.com/us/app/shadowrocket/id932747118" class="js-report-btn" data-url="点我下载">  【点我下载进入下载页面】</a>
+            <div class="drawer_lightText">
+                1. 如您已下载小火箭(Shadowrocket)，请跳到步骤二；<br>
+                2. 打开AppStore，右上角退出已有账号，登录共享id提供的账号，下载(Shadowrocket)<br>
+                3. 如提示「<strong>Apple ID 安全</strong>」，选择 <strong>其他选项</strong> - <strong>不升级，即可登录</strong>；<br>
+                4. 若账号问题，请联系右下角客服 ，根据客服提示操作；<br>
+                5. 下载完成后请退出共享的id，并切换回自己的id。
+            </div>
+            <div class="drawer_accentText mt-15">步骤二：注册并登录官网</div>
+            <div class="drawer_lightText">
+                1. 登录官网后，点击主页一键订阅，点击一键导入到Shadowrocket<br>
+                2. 选择线路连接，如若网络不可用，请更换线路或登录官网检查是否到期；<br>
+                3. 有任何问题，请联系右下角客服处理,或登录官网提交工单。
             </div>
         </div>
     </div>
