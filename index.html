@@ -118,8 +118,33 @@
             }
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.querySelector(".container");
+            const passwordProtect = document.getElementById("password-protect");
+            container.style.display = "none";
+            passwordProtect.style.display = "block";
+        });
+
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+            if (password === "12345") {
+                document.querySelector(".container").style.display = "block";
+                document.getElementById("password-protect").style.display = "none";
+            } else {
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
 </head>
 <body>
+    <div id="password-protect" style="display: none;">
+        <p>请输入密码以访问此页面:</p>
+        <input type="password" id="password" placeholder="输入密码">
+        <button onclick="checkPassword()">提交</button>
+        <p id="error-message" style="color:red; display:none;">密码错误，请重试。</p>
+    </div>
     <div class="container">
         <div class="index_title">随时随地，畅游互联网</div>
         <div class="index_contentBox">
@@ -142,13 +167,4 @@
                 4. 若账号问题，请联系右下角客服 ，根据客服提示操作；<br>
                 5. 下载完成后请退出共享的id，并切换回自己的id。
             </div>
-            <div class="drawer_accentText mt-15">步骤二：注册并登录官网</div>
-            <div class="drawer_lightText">
-                1. 登录官网后，点击主页一键订阅，点击一键导入到Shadowrocket<br>
-                2. 选择线路连接，如若网络不可用，请更换线路或登录官网检查是否到期；<br>
-                3. 有任何问题，请联系右下角客服处理,或登录官网提交工单。
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+            <div class="drawer_accentText mt-15">步骤二
